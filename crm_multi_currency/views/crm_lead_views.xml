@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+
+    <record id="crm_case_kanban_view_leads" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="name">CRM Lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="/kanban/templates//field[@name='planned_revenue']" position="replace">
+                <field name="currency_id" invisible="True"/>
+                <field name="planned_revenue" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_form_view_oppor" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="name">CRM Lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='planned_revenue']" position="replace">
+                 <field name="currency_id" class="oe_inline" options="{'no_create': True, 'no_open': True}" />
+                 <field name="planned_revenue"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_create_opportunity_simplified" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="name">CRM Lead</field>
+        <field name="inherit_id" ref="crm.view_create_opportunity_simplified" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='planned_revenue']" position="replace">
+                 <field name="currency_id" class="oe_inline" options="{'no_create': True, 'no_open': True}" />
+                 <field name="planned_revenue"/>
+            </xpath>
+        </field>
+    </record>
+
+
+  </data>
+</odoo>
