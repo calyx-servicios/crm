@@ -12,7 +12,7 @@
     'author': "Calyx",
     'website': "http://www.calyxservicios.com.ar",
     'category': 'CRM',
-    'version': '0.1',
+    'version': '11.0.1.0.0',
     'depends': ['crm'],
     'data': [
         'views/lead_view.xml',
