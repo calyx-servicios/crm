@@ -1,7 +1,7 @@
 {
     'name': 'Crm suscribe all subtypes',
-    'version': '11.0.1.0.0',
-    'category': 'Tools',
+    'version': '11.0.1.0.1',
+    'category': 'Crm',
     'author': "Calyx",
     'website': 'www.calyxservicios.com.ar',
     'license': 'AGPL-3',
